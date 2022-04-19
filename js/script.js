@@ -52,29 +52,26 @@ function fixedNav(){
 	}
 }
 window.addEventListener('scroll', fixedNav)
-//
-new Swiper('.review__swiper > .swiper-container', {
-   direction: 'horizontal',
-   loop: !1,
-   initialSlide: 0,
-   speed: 1500,
-   slidesPerView: 1,
-   spaceBetween: 30,
-   /* breakpoints: {
-      1024:{
-         slidesPerView: 4,
+// swiper
+if (document.querySelector('.home')){
+   new Swiper('.review__swiper > .swiper-container', {
+      direction: 'horizontal',
+      loop: !1,
+      initialSlide: 0,
+      speed: 1500,
+      slidesPerView: 1,
+      spaceBetween: 30,
+      keyboard: {
+         enabled: !0,
+         onlyInViewport: !1
       },
-   }, */
-   keyboard: {
-      enabled: !0,
-      onlyInViewport: !1
-   },
-   pagination: {
-      el: ".swiper-pagination",
-      type: "fraction",
-    },
-    navigation: {
-      nextEl: ".swiper-next",
-      prevEl: ".swiper-prev",
-    },
-});
+      pagination: {
+         el: ".swiper-pagination",
+         type: "fraction",
+       },
+       navigation: {
+         nextEl: ".swiper-next",
+         prevEl: ".swiper-prev",
+       },
+   });
+}
