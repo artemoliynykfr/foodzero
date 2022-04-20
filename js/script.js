@@ -52,15 +52,20 @@ function fixedNav(){
 	}
 }
 window.addEventListener('scroll', fixedNav)
-// swiper
+// home 
 if (document.querySelector('.home')){
+   // review__swiper
    new Swiper('.review__swiper > .swiper-container', {
       direction: 'horizontal',
       loop: !1,
       initialSlide: 0,
       speed: 1500,
       slidesPerView: 1,
-      spaceBetween: 30,
+      spaceBetween: 50,
+      autoplay: {
+         delay: 5000,
+         disableOnInteraction: true,
+      },
       keyboard: {
          enabled: !0,
          onlyInViewport: !1
@@ -74,4 +79,16 @@ if (document.querySelector('.home')){
          prevEl: ".swiper-prev",
        },
    });
+   // scroll down link start
+   const links = document.querySelectorAll(".start__scroll");
+   for (const link of links) {
+     link.addEventListener("click", clickHandler);
+   }
+   function clickHandler(e) {
+     e.preventDefault();
+     const theLink = this.getAttribute("href");
+     document.querySelector(theLink).scrollIntoView({
+       behavior: "smooth"
+     });
+   }
 }

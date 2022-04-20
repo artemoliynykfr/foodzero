@@ -144,6 +144,8 @@ header .start__img-block {
 header .start__img-block img {
   width: 250px;
   z-index: 1 !important;
+  -webkit-animation: img-spin 30s 0s infinite linear;
+          animation: img-spin 30s 0s infinite linear;
 }
 
 .fixed__nav {
@@ -351,6 +353,16 @@ header .start__img-block img {
   font-size: 26px;
   line-height: 1.19;
   color: #ffffff;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.nav__link:hover {
+  opacity: 0.7;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .nav__btn {
@@ -804,6 +816,19 @@ header .start__img-block img {
   margin-top: 133px;
 }
 
+.reservation input[type=date]::-webkit-calendar-picker-indicator {
+  background: url(..//img/arrow-down.svg) center no-repeat;
+}
+
+.reservation input[type=time]::-webkit-datetime-edit-ampm-field {
+  text-transform: lowercase;
+}
+
+.reservation input[type=time]::-webkit-calendar-picker-indicator {
+  background: url(..//img/arrow-down.svg) center no-repeat;
+  cursor: pointer;
+}
+
 .reservation__form-input {
   -webkit-box-flex: 0;
       -ms-flex: 0 1 30%;
@@ -811,7 +836,15 @@ header .start__img-block img {
   border: 2px solid #000000;
   padding: 30px 40px;
   background: #fff;
-  height: 100%;
+  height: 80px;
+  width: 100%;
+}
+
+.reservation__form-input-text {
+  background: url(..//img/arrow-down.svg) right no-repeat;
+  background-position: 90%;
+  padding: 30px 90px 30px 40px;
+  width: 100%;
 }
 
 .reservation__form-input::-webkit-input-placeholder {
@@ -838,15 +871,11 @@ header .start__img-block img {
   color: #000000;
 }
 
-.reservation__form-input[type=time]::-webkit-inner-spin-button {
-  display: none !important;
-}
-
 .reservation__form-btn {
   -webkit-box-flex: 0;
       -ms-flex: 0 1 30%;
           flex: 0 1 30%;
-  padding: 30px 0;
+  height: 80px;
   background: #233000;
   border: 2px solid #000000;
   -webkit-transition: all 0.3s ease;
@@ -1012,7 +1041,7 @@ header .start__img-block img {
 }
 
 .review__swiper .swiper__btn {
-  z-index: 2 !important;
+  z-index: 99 !important;
   cursor: pointer;
 }
 
@@ -1264,6 +1293,30 @@ li {
   }
 }
 
+@-webkit-keyframes img-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes img-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
 /* Main */
 
 .title {
@@ -1432,12 +1485,12 @@ li {
     height: 600px;
   }
 
-  .reservation__form-input {
-    padding: 20px 30px;
+  .reservation__form-input-text {
+    padding: 20px 70px 20px 30px !important;
   }
 
-  .reservation__form-btn {
-    padding: 20px 0;
+  .reservation__form-input {
+    padding: 20px 30px;
   }
 
   .footer__logo {
@@ -1860,6 +1913,10 @@ li {
             flex: 0 1 100%;
   }
 
+  .reservation__form-input-text {
+    background-position: 95%;
+  }
+
   .reservation__form-input {
     -webkit-box-flex: 0;
         -ms-flex: 0 1 100%;
@@ -1871,6 +1928,7 @@ li {
     -webkit-transform: translate(50%, 0);
         -ms-transform: translate(50%, 0);
             transform: translate(50%, 0);
+    z-index: 99;
   }
 
   .review__swiper .slide__contact img {
@@ -1986,6 +2044,12 @@ li {
     display: none;
   }
 
+  .reservation__form-btn {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 100%;
+            flex: 0 1 100%;
+  }
+
   .review__swiper .slide__text {
     font-size: 30px;
   }
@@ -2067,10 +2131,8 @@ li {
     margin-top: 50px;
   }
 
-  .reservation__form-btn {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 1 100%;
-            flex: 0 1 100%;
+  .reservation__form-input-text {
+    background-position: 93%;
   }
 
   .balance__item {
@@ -2144,6 +2206,10 @@ li {
 
   .menu__item-title {
     font-size: 30px;
+  }
+
+  .reservation__form-input-text {
+    padding: 20px 50px 20px 20px !important;
   }
 
   .reservation__form-input {
