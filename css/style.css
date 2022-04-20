@@ -2230,6 +2230,10 @@ li {
     padding: 0 0 150px;
   }
 
+  .section__story {
+    padding: 150px 0;
+  }
+
   .story__header {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
