@@ -20,6 +20,39 @@ header.header__about {
   width: 100%;
 }
 
+header.header__soon {
+  background: url(..//img/soon_bg.png) center no-repeat;
+  background-size: cover !important;
+  width: 100%;
+  position: relative;
+}
+
+header.header__soon::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: #233000;
+  opacity: 0.72;
+  z-index: 0 !important;
+}
+
+header.header__contact {
+  background: url(..//img/start_contact_bg.png) center no-repeat;
+  background-size: cover !important;
+  width: 100%;
+}
+
+header.header__blog {
+  background: url(..//img/start_blog_bg.png) center no-repeat;
+  background-size: cover !important;
+  width: 100%;
+}
+
 header .section__start {
   padding: 102px 0 222px;
   position: relative;
@@ -49,6 +82,72 @@ header .section__start-about .start__item .start__content {
 
 header .section__start-about .start__title {
   max-width: 879px;
+}
+
+header .section__start-contact {
+  padding: 200px 0 130px;
+}
+
+header .section__start-contact .start {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 0;
+}
+
+header .section__start-contact .start__item.second-item {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: 696px;
+  width: 100%;
+  margin-top: 350px !important;
+}
+
+header .section__start-contact .start__item.second-item .start__item-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-bottom: 38px;
+  border-bottom: 2px dashed #FFFFFF;
+  margin-bottom: 38px;
+  width: 100%;
+}
+
+header .section__start-contact .start__item.second-item .start__item-text {
+  color: #FFFFFF !important;
+}
+
+header .section__start-contact .start__item.second-item .start__item-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  text-align: left;
+}
+
+header .section__start-blog .start__content {
+  text-align: center;
+  margin: 0 auto;
 }
 
 header .start__item {
@@ -199,6 +298,10 @@ header .start__img-block img {
       -ms-flex-align: center;
           align-items: center;
   padding: 46px 0;
+}
+
+.nav__logo {
+  z-index: 1 !important;
 }
 
 .nav__logo svg {
@@ -361,6 +464,7 @@ header .start__img-block img {
 }
 
 .nav__contact {
+  z-index: 1 !important;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -696,6 +800,75 @@ header .start__img-block img {
   padding: 0 0 342px;
 }
 
+.section__fashion-blog {
+  padding: 128px 0 226px;
+}
+
+.section__fashion-blog .fashion {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.section__fashion-blog .fashion__item:nth-child(3) .fashion__item-img {
+  background: url(..//img/fashion_img3.png) center no-repeat;
+}
+
+.section__fashion-blog .fashion__item:nth-child(4) .fashion__item-img {
+  background: url(..//img/fashion_img4.png) center no-repeat;
+}
+
+.section__fashion-blog .fashion__item:nth-child(5) .fashion__item-img {
+  background: url(..//img/fashion_img5.png) center no-repeat;
+}
+
+.section__fashion-blog .fashion__item:nth-child(6) .fashion__item-img {
+  background: url(..//img/fashion_img6.png) center no-repeat;
+}
+
+.section__fashion-blog .fashion__pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 40px;
+  list-style: none;
+  margin-top: 150px;
+}
+
+.section__fashion-blog .fashion__pagination-btn {
+  padding: 10px 20px;
+  border: 2px solid #000000;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.section__fashion-blog .fashion__pagination-btn:hover {
+  background: #000000;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.section__fashion-blog .fashion__pagination-btn:hover .text {
+  color: #ffffff !important;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.section__fashion-blog .fashion__pagination-btn .text {
+  color: #000000 !important;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
 .fashion {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -813,11 +986,48 @@ header .start__img-block img {
 }
 
 .section__reservation {
+  padding: 0 0 150px;
+}
+
+.section__reservation-main {
   padding: 0 0 382px;
 }
 
-.section__reservation-menu {
+.section__reservation-contact {
   padding: 0 0 150px;
+}
+
+.section__reservation-contact .reservation__header {
+  position: relative;
+  max-width: 985px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.section__reservation-contact .reservation__header::after {
+  content: url(..//img/mint.png);
+  position: absolute;
+  left: -309px;
+  top: -164px;
+}
+
+.section__reservation-contact .reservation__form-input {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 100%;
+          flex: 0 1 100%;
+}
+
+.section__reservation-contact .reservation__form-input-text {
+  background: url(..//img/arrow-down.svg) right no-repeat;
+  background-position: 97.5%;
+  padding: 30px 90px 30px 40px;
+  width: 100%;
+}
+
+.section__reservation-contact .reservation__form-input.small {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 48.5%;
+          flex: 0 1 48.5%;
 }
 
 .reservation {
@@ -1389,6 +1599,187 @@ header .start__img-block img {
   color: #000000;
 }
 
+.section__soon {
+  padding: 138px 0 228px;
+  min-height: 100vh;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.soon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+}
+
+.soon__title {
+  z-index: 1;
+  font-family: "Rufina";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 88px;
+  line-height: 120%;
+  letter-spacing: 14px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  text-align: center;
+}
+
+.soon__title-under {
+  border-bottom: 2px dashed #FFFFFF;
+  padding-bottom: 19px;
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 19px;
+}
+
+.soon__time {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 134px;
+  gap: 136px;
+  z-index: 1;
+}
+
+.soon__item {
+  text-align: center;
+}
+
+.soon__text {
+  color: #FFFFFF !important;
+}
+
+.soon__btn {
+  padding: 20px 46px;
+  border: 2px solid #FFFFFF;
+  z-index: 1;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.soon__btn:hover {
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  background-color: #FFFFFF;
+  color: #233000;
+}
+
+.section__contact {
+  padding: 278px 0 400px;
+}
+
+.contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 145px;
+}
+
+.contact__item-text {
+  color: #233000 !important;
+}
+
+.contact__item-text a {
+  color: #9CAA00;
+}
+
+.contact__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 60px;
+}
+
+.contact__item:first-child {
+  gap: 202px;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.contact__item:first-child .contact__item-text {
+  max-width: 507px;
+  width: 100%;
+  padding-bottom: 100px;
+}
+
+.contact__item:first-child .contact__item-img {
+  position: relative;
+}
+
+.contact__item:first-child .contact__item-img::after {
+  content: url(..//img/orange.png);
+  position: absolute;
+  right: -283px;
+  top: -120px;
+  z-index: -1 !important;
+}
+
+.contact__item.reverse {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+.contact__item.reverse .contact__item-text {
+  margin-bottom: 73px;
+}
+
+.contact__item-img {
+  width: 100%;
+}
+
+.contact__item-img img {
+  width: 100%;
+  height: auto;
+  z-index: 1 !important;
+}
+
+.contact__item-btn {
+  padding: 20px 46px;
+  border: 2px solid #000000;
+}
+
 footer {
   background: #233000;
   border: 2px solid #000000;
@@ -1702,6 +2093,30 @@ li {
   color: #ffffff;
 }
 
+@media (max-width: 1662px) {
+  header .section__start-contact .start__item.second-item {
+    max-width: 550px;
+  }
+
+  .section__menu-menu.section__menu::after {
+    top: -150px;
+  }
+
+  .menu__item {
+    max-width: 650px;
+  }
+
+  .section__reservation-contact .reservation__form-input.small {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 48%;
+            flex: 0 1 48%;
+  }
+
+  .container {
+    max-width: 1420px;
+  }
+}
+
 @media (max-width: 1662px) and (max-height: 900px) {
   .fixed__nav .nav__logo {
     width: 200px;
@@ -1716,21 +2131,11 @@ li {
   }
 }
 
-@media (max-width: 1662px) {
-  .section__menu-menu.section__menu::after {
-    top: -150px;
-  }
-
-  .menu__item {
-    max-width: 650px;
-  }
-
-  .container {
-    max-width: 1420px;
-  }
-}
-
 @media (max-width: 1440px) {
+  header .section__start-contact .start__item.second-item {
+    max-width: 500px;
+  }
+
   header .start__item.second-item {
     margin-top: 500px;
   }
@@ -1812,6 +2217,20 @@ li {
     height: 600px;
   }
 
+  .section__reservation-contact .reservation__header::after {
+    left: -150px;
+  }
+
+  .section__reservation-contact .reservation__form-input-text {
+    padding: 20px 70px 20px 30px !important;
+  }
+
+  .section__reservation-contact .reservation__form-input.small {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 47.8%;
+            flex: 0 1 47.8%;
+  }
+
   .reservation__form-input-text {
     padding: 20px 70px 20px 30px !important;
   }
@@ -1840,6 +2259,14 @@ li {
     -webkit-box-flex: 0;
         -ms-flex: 0 1 40%;
             flex: 0 1 40%;
+  }
+
+  .contact__item:first-child {
+    gap: 60px;
+  }
+
+  .contact__item:first-child .contact__item-img::after {
+    right: -150px;
   }
 
   .footer__logo {
@@ -1877,6 +2304,28 @@ li {
 }
 
 @media (max-width: 1200px) {
+  header .section__start-contact .start {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+  }
+
+  header .section__start-contact .start__item.second-item {
+    margin-top: 100px !important;
+    max-width: 550px;
+    gap: 0;
+  }
+
+  header .section__start-contact .start__item.second-item .start__item-header {
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+  }
+
   header .start__item.second-item {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -2009,6 +2458,19 @@ li {
     font-size: 36px;
   }
 
+  .section__reservation-contact .reservation__header::after {
+    left: 50%;
+    -webkit-transform: translate(-50%, 0);
+        -ms-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+  }
+
+  .section__reservation-contact .reservation__form-input.small {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 48.9%;
+            flex: 0 1 48.9%;
+  }
+
   .reservation__form {
     gap: 20px;
   }
@@ -2057,6 +2519,10 @@ li {
        -moz-column-gap: 100px;
             column-gap: 100px;
     row-gap: 50px;
+  }
+
+  .soon__title {
+    font-size: 64px;
   }
 
   .footer {
@@ -2211,6 +2677,10 @@ li {
     padding: 0 0 150px;
   }
 
+  .section__fashion-blog {
+    padding: 150px 0;
+  }
+
   .fashion {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -2222,8 +2692,14 @@ li {
             flex: 0 1 100%;
   }
 
-  .section__reservation {
+  .section__reservation-main {
     padding: 0 0 150px;
+  }
+
+  .section__reservation-contact .reservation__form-input.small {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 48.5%;
+            flex: 0 1 48.5%;
   }
 
   .section__balance {
@@ -2296,6 +2772,26 @@ li {
             flex: 0 1 100%;
     padding-bottom: 0;
   }
+
+  .soon__time {
+    gap: 50px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+
+  .contact__item {
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
+    text-align: center;
+    gap: 30px !important;
+  }
+
+  .contact__item:first-child .contact__item-text {
+    padding-bottom: 0;
+    margin: 0 auto;
+  }
 }
 
 @media (max-width: 992px) and (max-height: 800px) {
@@ -2360,6 +2856,20 @@ li {
             flex: 0 1 100%;
   }
 
+  .section__reservation-contact .reservation__header::after {
+    top: -130px;
+  }
+
+  .section__reservation-contact .reservation__form-input-text {
+    background-position: 95%;
+  }
+
+  .section__reservation-contact .reservation__form-input.small {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 100%;
+            flex: 0 1 100%;
+  }
+
   .reservation__form-input-text {
     background-position: 95%;
   }
@@ -2410,6 +2920,18 @@ li {
 
   .process__item-title {
     font-size: 64px;
+  }
+
+  .section__soon {
+    padding: 120px 0 150px;
+  }
+
+  .soon__title {
+    font-size: 48px;
+  }
+
+  .contact__item:first-child .contact__item-img::after {
+    display: none;
   }
 
   .footer {
@@ -2517,6 +3039,10 @@ li {
     display: none;
   }
 
+  .section__fashion-blog .fashion__pagination {
+    gap: 20px;
+  }
+
   .reservation__form-btn {
     -webkit-box-flex: 0;
         -ms-flex: 0 1 100%;
@@ -2582,6 +3108,11 @@ li {
     width: 130px;
   }
 
+  .section__fashion-blog .fashion__pagination {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+
   .fashion__item-img {
     height: 500px;
   }
@@ -2602,6 +3133,10 @@ li {
 
   .fashion__item-text {
     font-size: 20px;
+  }
+
+  .section__reservation-contact .reservation__form-input-text {
+    background-position: 93%;
   }
 
   .reservation__form {
@@ -2636,6 +3171,22 @@ li {
     text-align: left;
   }
 
+  .soon__title {
+    font-size: 36px;
+  }
+
+  .soon__time {
+    gap: 20px;
+  }
+
+  .contact {
+    gap: 60px;
+  }
+
+  .contact__item-text {
+    font-size: 24px;
+  }
+
   .title-big {
     font-size: 48px;
   }
@@ -2646,6 +3197,16 @@ li {
 }
 
 @media (max-width: 450px) {
+  header .section__start-contact .start__item.second-item .start__item-body {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 25px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: center;
+  }
+
   .section__menu::after {
     top: -600px;
   }
@@ -2685,6 +3246,21 @@ li {
 }
 
 @media (max-width: 400px) {
+  header .section__start-contact .start__item.second-item .start__item-header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    border-bottom: none;
+  }
+
+  header .section__start-contact .start__item.second-item .start__item-body {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
   header .start__subtitle {
     font-size: 36px;
   }
@@ -2699,6 +3275,10 @@ li {
 
   .menu__item-title {
     font-size: 30px;
+  }
+
+  .section__reservation-contact .reservation__form-input-text {
+    padding: 20px 50px 20px 20px !important;
   }
 
   .reservation__form-input-text {
@@ -2722,6 +3302,12 @@ li {
     width: 100px;
     height: 100px;
   }
+
+  .soon__btn {
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+  }
 }
 
 @media (max-width: 350px) {
@@ -2732,13 +3318,38 @@ li {
   .process__title {
     font-size: 36px;
   }
+
+  .contact__item-btn {
+    width: 100%;
+    padding: 20px 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 .webp header.header { background: url(..//img/start_menu_bg.webp) center no-repeat; }
 
 .webp header.header__about { background: url(..//img/start_about_bg.webp) center no-repeat; }
 
+.webp header.header__soon { background: url(..//img/soon_bg.webp) center no-repeat; }
+
+.webp header.header__contact { background: url(..//img/start_contact_bg.webp) center no-repeat; }
+
+.webp header.header__blog { background: url(..//img/start_blog_bg.webp) center no-repeat; }
+
 .webp .nav__menu { background: url(..//img/burger_bg.webp) center no-repeat; }
+
+.webp .section__fashion-blog .fashion__item:nth-child(3) .fashion__item-img { background: url(..//img/fashion_img3.webp) center no-repeat; }
+
+.webp .section__fashion-blog .fashion__item:nth-child(4) .fashion__item-img { background: url(..//img/fashion_img4.webp) center no-repeat; }
+
+.webp .section__fashion-blog .fashion__item:nth-child(5) .fashion__item-img { background: url(..//img/fashion_img5.webp) center no-repeat; }
+
+.webp .section__fashion-blog .fashion__item:nth-child(6) .fashion__item-img { background: url(..//img/fashion_img6.webp) center no-repeat; }
 
 .webp .fashion__item:nth-child(2) .fashion__item-img { background: url(..//img/fashion_img2.webp) center no-repeat; }
 
