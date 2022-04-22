@@ -93,6 +93,37 @@ if (document.querySelector('.home')) {
    }
 }
 
+if (document.querySelector('.blog')) {
+   var swiper = new Swiper(".mySwiper", {
+      spaceBetween: 60,
+      slidesPerView: 2,
+      loop: !0,
+      freeMode: true,
+      direction: 'vertical',
+      breakpoints: {
+         1201:{
+            spaceBetween: 30,
+            direction: 'vertical',
+         },
+         451:{
+            slidesPerView: 2,
+            direction: 'horizontal',
+         },
+         0:{
+            direction: 'horizontal',
+            slidesPerView: 1,
+         }
+      }
+      
+   });
+   var swiper2 = new Swiper(".mySwiper2", {
+      spaceBetween: 10,
+      loop: !0,
+      thumbs: {
+        swiper: swiper,
+      },
+    });
+}
 
 
 if (document.querySelector('.body__soon')) {
