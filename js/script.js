@@ -92,7 +92,7 @@ if (document.querySelector('.home')) {
       });
    }
 }
-
+// blog
 if (document.querySelector('.blog')) {
    var swiper = new Swiper(".mySwiper", {
       spaceBetween: 60,
@@ -101,31 +101,30 @@ if (document.querySelector('.blog')) {
       freeMode: true,
       direction: 'vertical',
       breakpoints: {
-         1201:{
+         1201: {
             spaceBetween: 30,
             direction: 'vertical',
          },
-         451:{
+         451: {
             slidesPerView: 2,
             direction: 'horizontal',
          },
-         0:{
+         0: {
             direction: 'horizontal',
             slidesPerView: 1,
          }
       }
-      
+
    });
    var swiper2 = new Swiper(".mySwiper2", {
       spaceBetween: 10,
       loop: !0,
       thumbs: {
-        swiper: swiper,
+         swiper: swiper,
       },
-    });
+   });
 }
-
-
+// soon
 if (document.querySelector('.body__soon')) {
    function getTimeRemaining(endtime) {
       const total = Date.parse(endtime) - Date.parse(new Date());
@@ -144,7 +143,6 @@ if (document.querySelector('.body__soon')) {
          month
       };
    }
-
    function initializeClock(id, endtime) {
       const clock = document.getElementById(id);
       const mouthSpan = clock.querySelector('#timer-months');
@@ -152,25 +150,20 @@ if (document.querySelector('.body__soon')) {
       const hoursSpan = clock.querySelector('#timer-hours');
       const minutesSpan = clock.querySelector('#timer-mins');
       const secondsSpan = clock.querySelector('#timer-secs');
-
       function updateClock() {
          const t = getTimeRemaining(endtime);
-
          mouthSpan.innerHTML = t.month;
          daysSpan.innerHTML = ('0' + t.days).slice(-2);
          hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
          minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
          secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
-
          if (t.total <= 0) {
             clearInterval(timeinterval);
          }
       }
-
       updateClock();
       const timeinterval = setInterval(updateClock, 1000);
    }
-
    const deadline = new Date(Date.parse(new Date()) + 2 * 30 * 24 * 60 * 60 * 1000);
    initializeClock('timer', deadline);
 }
