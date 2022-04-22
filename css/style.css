@@ -428,6 +428,10 @@ header .start__img-block img {
   transition: all 0.3s ease;
 }
 
+.nav__list li.hide {
+  display: none;
+}
+
 .nav__list li:hover {
   -webkit-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
@@ -493,6 +497,10 @@ header .start__img-block img {
   max-width: 197px;
   width: 100%;
   margin-bottom: 38px;
+}
+
+.nav__info-text.hide {
+  display: none;
 }
 
 .nav__info-icons {
@@ -3014,6 +3022,10 @@ li {
     gap: 15px;
   }
 
+  .nav__list li.hide {
+    display: block;
+  }
+
   .nav__list-link {
     font-size: 40px;
   }
@@ -3026,22 +3038,12 @@ li {
     width: 100%;
   }
 
-  .nav__contact {
-    display: none;
+  .nav__info-text.hide {
+    display: block;
   }
 
-  .nav__contact.active {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    z-index: 22;
-    width: 100%;
-    position: absolute;
-    left: 0;
-    right: 0;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+  .nav__contact {
+    display: none;
   }
 
   .section__menu {
@@ -3510,18 +3512,6 @@ li {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-  }
-
-  .nav__contact.active {
-    position: relative;
-    top: -30px;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    text-align: center;
-    gap: 15px;
-    display: none;
   }
 
   .section__fashion-blog .fashion__pagination {
