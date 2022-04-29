@@ -13,7 +13,7 @@ testWebP(function (support) {
       document.querySelector('body').classList.add('no-webp');
    }
 });
-// burger
+// burger 
 function burgerMenu() {
    const burger = document.querySelector('.burger')
    const menu = document.querySelector('.nav__menu')
@@ -167,3 +167,38 @@ if (document.querySelector('.body__soon')) {
    const deadline = new Date(Date.parse(new Date()) + 2 * 30 * 24 * 60 * 60 * 1000);
    initializeClock('timer', deadline);
 }
+const scrollElements = document.querySelectorAll('.js-scroll');
+const elementInView = (el, dividend = 1) => {
+   const elementTop = el.getBoundingClientRect().top;
+   return (
+      elementTop <=
+      (window.innerHeight || document.documentElement.clientHeight) / dividend
+   );
+};
+const elementOutofView = (el) => {
+   const elementTop = el.getBoundingClientRect().top;
+   return (
+      elementTop > (window.innerHeight || document.documentElement.clientHeight)
+   );
+};
+const displayScrollElement = (element) => {
+   element.classList.add('scrolled');
+};
+const hideScrollElement = (element) => {
+   element.classList.remove('scrolled');
+};
+const handleScrollAnimation = () => {
+   scrollElements.forEach((el) => {
+      if (elementInView(el, 1)) {
+         displayScrollElement(el)
+      } else if (elementOutofView(el)) {
+         hideScrollElement(el)
+      }
+   })
+}
+window.addEventListener('scroll', () => {
+   handleScrollAnimation();
+});
+window.addEventListener('load', () => {
+   handleScrollAnimation();
+});
